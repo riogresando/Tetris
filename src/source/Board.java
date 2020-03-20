@@ -166,6 +166,18 @@ public class Board extends JPanel implements KeyListener {
 		g.setColor(Color.BLACK);
 		g.drawString("LINES CLEARED: " + scoreString, 50, 40);
 
+		buildGrid(g);
+
+		// new gameover image
+		if (gameOver) {
+			// x,y,lebar,tinggi
+
+			g.drawImage(gO, 10, 150, 280, 500, null);
+
+		}
+	}
+
+	private void buildGrid(Graphics g) {
 		// bikin grid blocks
 		// horizontal
 		g.setColor(Color.DARK_GRAY);
@@ -177,14 +189,6 @@ public class Board extends JPanel implements KeyListener {
 		for (int i = 0; i <= GRIDWIDTH; i++) {
 			g.drawLine(i * BLOCKSIZE + BLOCKSIZE, (indentY + (BLOCKSIZE * 4)), i * BLOCKSIZE + BLOCKSIZE,
 					(GRIDHEIGHT - 4) * BLOCKSIZE + (indentY + (BLOCKSIZE * 4)));
-		}
-
-		// new gameover image
-		if (gameOver) {
-			// x,y,lebar,tinggi
-
-			g.drawImage(gO, 10, 150, 280, 500, null);
-
 		}
 	}
 

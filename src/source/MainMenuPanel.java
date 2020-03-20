@@ -23,7 +23,7 @@ public class MainMenuPanel extends JPanel {
 	JLabel play, exit, howToPlay;
 	BufferedImage cube;
 	BufferedImage img;
-	Clip clip;
+	static Clip clip;
 	private String highscore = "0";
 	private int currHighscore = 0;
 	private int newHighscore = 0;
